@@ -16,19 +16,25 @@ public class BasicVectorProp
 	
 	//methods
 	
+	//The magnitude of the method
 	public static double mag(double[] vector)
 	{
 		return(Math.sqrt((Math.pow(vector[0],2) + Math.pow(vector[1], 2) + Math.pow(vector[2], 2))));
 	}
 
+	//the dot product of two vectors
 	public static double dotProduct(double[] a, double[] b)
 	{
 		return((a[0]*b[0])+(a[1]*b[1])+(a[2]*b[2]));
 	}
+	
+	//finding the angle between two vectors
 	public static double angleBet(double [] a, double [] b)
 	{
 		return(Math.acos((dotProduct(a,b))/(mag(a)*mag(b))));
 	}
+	
+	//the projection of a vector on another vector 
 	public static double[] projection(double[] a, double[] b)
 	{
 		double cons = (dotProduct(a,b)/Math.pow(mag(b),2));
@@ -38,6 +44,8 @@ public class BasicVectorProp
 		}
 		return b;
 	}
+	
+	//the crossProduct of two vectors 
 	public static double[] crossProduct( double[] a, double[] b)
 	{
 		double[] temp = new double[3];
